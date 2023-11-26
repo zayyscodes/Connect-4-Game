@@ -220,7 +220,7 @@ playermove PROC uses eax edx ecx ebx esi edi
     lea edx, colons
     CALL writeString
     mov eax,0  ;  intialize eax
-    CALL Readdec   ; taking player input
+    CALL readDec   ; taking player input
     mov playerinput, eax  ; store player input in variable
     CALL checkColumn  ; check where to insert move 
     CALL isDraw         
@@ -248,7 +248,7 @@ player2move PROC
     lea edx, colons
     CALL writeString
     mov eax,0  ;  intialize eax
-    CALL Readdec   ; taking player input
+    CALL readDec   ; taking player input
     mov playerinput, eax  ; store player input in variable
     CALL checkColumn
     CALL isDraw
